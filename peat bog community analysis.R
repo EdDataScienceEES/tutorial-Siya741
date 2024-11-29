@@ -1,4 +1,4 @@
-# Creating new tutorial about NMDS
+# Creating new tutorial about community analysis
 # Data Science in EES 2024
 # Auther: Siya-Qin
 # 27th November 2024
@@ -178,7 +178,7 @@ relative_abundance <- ggplot(
   labs(
     x = "Species",
     y = "Relative Abundance",
-    caption = "Figure 3: A 4-panel bar plot showing relative abundance of species across three microhabitats (sediment, sphagnum, and water) and overall data, including original total counts displayed above each bar."
+    caption = "Figure 3: A 4-panel bar plot showing relative abundance of species across three microhabitats (sediment, sphagnum, and water) and overall data, \nincluding original total counts displayed above each bar."
   ) +
   theme(  # Adjust element and text
     panel.grid = element_blank(),              
@@ -247,5 +247,5 @@ print(PCA)
 # Save the plots
 ggsave("peat bog diversity metrics.png", plot = diversity_metrics, width = 13, height = 9, dpi = 300, device = "jpeg")
 ggsave("peat bog rank abundance.png", plot = rank_abundance, width = 13, height = 9, dpi = 300, device = "jpeg")
-ggsave("peat bog relatice abundance.png", plot = relative_abundance, width = 13, height = 9, dpi = 300, device = "jpeg")
+ggsave("peat bog relative abundance.png", plot = relative_abundance, width = 13, height = 9, dpi = 300, device = "jpeg")
 ggsave("peat bog PCA.png", plot = PCA, width = 13, height = 9, dpi = 300, device = "jpeg")
