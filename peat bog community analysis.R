@@ -1,7 +1,7 @@
 # Creating new tutorial about community analysis
 # Data Science in EES 2024
 # Auther: Siya-Qin
-# 27th November 2024
+# 29th November 2024
 
 # Install necessary packages (if not already installed)
 install.packages("readr")
@@ -11,7 +11,6 @@ install.packages("tidyr")
 install.packages("dplyr")
 install.packages("ggrepel")
 install.packages("ggpattern")
-install.packages("ragg")
 
 # Load required libraries
 library(readr)     # For read csv file
@@ -21,7 +20,6 @@ library(tidyr)     # For data manipulation
 library(dplyr)     # For data wrangling
 library(ggrepel)   # For non-overlapping text labels in plots
 library(ggpattern) # For adding patterns to bar plots
-library(ragg)      # For high quality plot
 
 # Load the dataset
 peat_bog_data <- read_csv("peat bog data.csv")
@@ -246,10 +244,10 @@ PCA <- ggplot(
 print(PCA)
 
 
-
-
-# Save the plots
-ggsave("peat bog diversity metrics.png", plot = diversity_metrics, width = 13, height = 9, dpi = 300, device = ragg::agg_png)
-ggsave("peat bog rank abundance.png", plot = rank_abundance, width = 13, height = 9, dpi = 300, device = "jpeg")
-ggsave("peat bog relative abundance.png", plot = relative_abundance, width = 13, height = 9, dpi = 300, device = ragg::agg_png)
-ggsave("peat bog PCA.png", plot = PCA, width = 13, height = 9, dpi = 300, device = "jpeg")
+# Save the plots, using ggsave directly will lose the pattern of legend after uploading
+# therefore use the export function in R studio and export the patterned plot as SVG format to preserve the pattern in legend
+# the example of using ggsave is as followed
+#ggsave("peat bog diversity metrics.png", plot = diversity_metrics, width = 13, height = 9, dpi = 300, device = "jpeg")
+#ggsave("peat bog rank abundance.png", plot = rank_abundance, width = 13, height = 9, dpi = 300, device = "jpeg")
+#ggsave("peat bog relative abundance.png", plot = relative_abundance, width = 13, height = 9, dpi = 600, device = "jpeg")
+#ggsave("peat bog PCA.png", plot = PCA, width = 13, height = 9, dpi = 300, device = "jpeg")
