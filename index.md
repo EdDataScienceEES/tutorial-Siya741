@@ -1,4 +1,4 @@
-<center><img src="plots/peat bog mesocosms .png" alt="Img"></center>
+<center><img src="plots/peat bog mesocosms.jpg" alt="Img"></center>
 
 ### Tutorial Aims
 
@@ -12,7 +12,7 @@
 
 In this tutorial, we will learn how to analyze community composition data from peat bog mesocosms using R. Specifically, we will calculate and visualize different diversity metrics, create rank-abundance plots, visualize relative abundance, and perform PCA to explore species clustering. These skills are important for understanding ecological diversity and species distributions within peatland ecosystems.
 
-You can get all of the resources for this tutorial from <a href="https://github.com/yourrepository/peat_bog_tutorial" target="_blank">this GitHub repository</a>. Clone and download the repo as a zip file, then unzip it.
+You can get all of the resources for this tutorial from <a href="https://github.com//EdDataScienceEES/tutorial-Siya741.git" target="_blank">this GitHub repository</a>. Clone and download the repo as a zip file, then unzip it.
 
 <a name="section1"></a>
 
@@ -20,7 +20,7 @@ You can get all of the resources for this tutorial from <a href="https://github.
 
 Diversity analysis helps us understand the complexity of the community in different habitats. Alpha diversity provides a measure of species richness within each habitat, beta diversity compares the diversity between habitats, and gamma diversity represents the overall diversity across all habitats. By calculating and comparing these metrics, we can better understand how species are distributed within and between different habitats, and identify which habitats are more diverse or unique.
 
-Start by opening RStudio and creating a new script by clicking on `File/ New File/ R Script`. Set the working directory and load the necessary packages:
+Start by opening RStudio and creating a new script by clicking on `File/ New File/ R Script`. Set the working directory, install necessary packages and load them:
 
 ```r
 # Set the working directory
